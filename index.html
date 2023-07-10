@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&family=Fraunces:wght@700&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Overpass:wght@400;700&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>  
+/*   
+- Almost White: hsl(0, 0%, 98%)
+- Medium Gray: hsl(0, 0%, 41%)
+- Almost Black: hsl(0, 0%, 8%) */  
+body{ 
+ 
+  background-color: hsl(0, 6%, 87%); 
+  position:relative;
+}
+*{ 
+  font-family: epilogue;
+}
+    .main{ 
+      margin:20px;
+    }
+     .nav{ 
+      display:flex; 
+      flex-direction: row; 
+      justify-content: space-between;
+     }  
+     a{
+      text-decoration: none; 
+      color: hsl(0, 0%, 41%); 
+      font-size: 13px;  
+      cursor: pointer;
+     }
+     .left,.right{ 
+      display:flex;  
+      flex-direction: row; 
+      justify-content: center;
+      column-gap:30px; 
+      align-items: center;
+      
+      
+     }  
+   
+     .logo{ 
+       height: 25px;
+       margin-top:2px;
+     } 
+     .right{ 
+      column-gap: 30px; 
+      
+     } 
+     .register{ 
+       border-style: solid;  
+       border-width: 1px;
+       height:25px; 
+       width:75px; 
+       text-align: center;  
+      
+       border-radius: 8px; 
+       padding-top:7px;
+     } 
+     .content{ 
+      display: flex; 
+      flex-direction: row; 
+      
+     }   
+     .left_content{ 
+      margin-left:133px;
+      
+     } 
+     .right_content{ 
+      margin-left:8px; 
+      margin-right:95px; 
+      margin-top:85px;
+     }
+     .hero{ 
+      width:450px; 
+      height:550px; 
+      
+     } 
+     .heading{  
+      margin-bottom:0px;
+      font-size:85px; 
+      font-weight: bold; 
+      line-height:75px; 
+      margin-right:150px; 
+      margin-top:200px;
+     }  
+     .para{  
+      margin-top:30px;
+      font-size: 15px; 
+      margin-bottom:35px; 
+      margin-right:350px; 
+       line-height:24px; 
+       color: hsl(0, 0%, 41%);  
+      
+     } 
+     .button{ 
+        height:50px; 
+        width:110px; 
+        border-radius:8px; 
+        background-color: black; 
+        color:white; 
+        border-style: none; 
+        cursor: pointer;
+     } 
+     .company{  
+      width:500px;
+       display:flex;
+       flex-direction:row;  
+       column-gap:40px;
+       margin-top:85px;
+       height:22px;
+     } 
+     .button:hover{ 
+      background-color: white; 
+      border-style: solid;
+      color:black; 
+      border-width: 1px;
+     } 
+     a:hover{ 
+       color:black;
+     }  
+     .onHover{ 
+      background-color: white;  
+      width:120px; 
+      height:130px; 
+      padding:15px; 
+      border-radius:10px; 
+      box-shadow:0px 0px 15px rgb(190, 186, 186); 
+      position:absolute; 
+      left:55px;
+     top:45px; 
+  
+     }
+
+     .tooltip{   
+    
+      font-size: 13px;;
+      display:grid;
+     grid-template-columns:30px 100px; 
+     align-items: center; 
+     height:30px; 
+  
+    
+     } 
+     .tooltip2{ 
+        background-color: white; 
+        width:80px; 
+        height:85px; 
+        font-size: 13px; 
+        padding-left:18px; 
+        padding-bottom:10px; 
+        border-radius: 10px; 
+        padding-top:8px;  
+        box-shadow:0px 0px 15px rgb(190, 186, 186); 
+        position:absolute; 
+      left:225px;
+     top:45px; 
+    
+     } 
+     /* .tooltip2 p{ 
+      margin:0px; 
+      margin-top:8px; 
+      margin-bottom:8px; 
+      
+     } */ 
+   
+  </style> 
+</head>
+<body>
+
+  <!-- Features
+  Company
+  Careers
+  About
+
+  Login
+  Register
+
+  Make remote work
+
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+  Learn more -->
+  
+  <div class="main"> 
+      <div class="nav"> 
+        <div class="left"> 
+          <img class="logo"src="logo.svg"> 
+          <a class="feat" onmouseover="tool(0)"   href="#">Features &nbsp;<span class="arrow_down"   ><img src="icon-arrow-down.svg"></span></a> 
+          <a class="comp"  onmouseover="tool2(1)" href="#">Company  &nbsp;<span class="arrow_down" ><img src="icon-arrow-down.svg"></span></a> 
+          <a href="#">Careers</a> 
+          <a href="#">About</a> 
+          
+        </div> 
+        <div class="right"> 
+          <a href="#">Login</a> 
+          <a href="#" class="register">Register</a>
+        </div>  
+
+    
+      
+    </div> 
+
+      <div class="content"> 
+             <div class="left_content"> 
+                <p class="heading"> Make remote work</p> 
+                <p class="para">
+                  Get your team in sync, no matter your location.<br> 
+                  Streamline processes, 
+                  create team rituals, and watch productivity soar.
+                </p> 
+
+                <button class="button">Learn more </button> 
+
+                <div class="company"> 
+                   <img src="client-databiz.svg"> 
+                   <img src="client-audiophile.svg"> 
+                   <img src="client-meet.svg"> 
+                   <img src="client-maker.svg">
+                </div>
+             </div> 
+               <div class="right_content"> 
+                 <img class="hero"src="image-hero-desktop.png">
+               </div>
+
+      </div> 
+
+     
+ 
+
+  </div> 
+  <script>   
+  
+    let ele=document.createElement('div'); 
+    let parent=document.querySelector(".main");  
+    
+    function tool(num){ 
+      let e=document.querySelectorAll(".arrow_down"); 
+      e[num].innerHTML='<img src="icon-arrow-up.svg">';
+      ele.classList.add("onHover"); 
+      let content=`
+            <div class="tooltip"> 
+              <img src="icon-todo.svg">
+              <p>Todo List</p>
+    
+          </div> 
+          <div class="tooltip"> 
+            <img src="icon-calendar.svg">
+            <p>Calender</p>
+    
+        </div>
+        <div class="tooltip"> 
+          <img src="icon-reminders.svg">
+          <p>Reminders</p>
+    
+      </div> 
+      <div class="tooltip"> 
+        <img src="icon-planning.svg">
+        <p>Planning</p>
+    
+         </div> 
+          `
+          ele.innerHTML=content; 
+         
+          parent.appendChild(ele);
+    } 
+    let ele2=document.createElement('div');  
+    
+    function tool2(num){  
+      let e=document.querySelectorAll(".arrow_down"); 
+      e[num].innerHTML='<img src="icon-arrow-up.svg">';
+         ele2.classList.add("tooltip2"); 
+         let content=`
+          <p>History</p>
+          <p>Our Team</p> 
+          <p>Blog</p>`
+          ele2.innerHTML=content; 
+          parent.appendChild(ele2);
+    } 
+    document.querySelector(".feat").addEventListener("mouseleave",function(){ 
+      document.querySelectorAll(".arrow_down")[0].innerHTML='<img src="icon-arrow-down.svg">'; 
+      parent.removeChild(ele);
+    }) 
+    document.querySelector(".comp").addEventListener("mouseleave",function(){ 
+      document.querySelectorAll(".arrow_down")[1].innerHTML='<img src="icon-arrow-down.svg">'; 
+      parent.removeChild(ele2);
+    })
+   
+  </script>
+</body>
+</html>
